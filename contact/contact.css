@@ -1,0 +1,550 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background: #818181f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #094f2e;
+    border-radius: 5px;
+}
+
+/* Navbar personalizado */
+.custom-navbar {
+    background: #d1d3cdf2;
+    padding: 0px 40px;
+    width: 93%;
+    border-radius: 9999px;
+    margin: 2.4vh auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    transition: top 0.7s ease; /* Transición suave al ocultarse */
+}
+
+.navbar-hidden {
+    top: -150px; /* Mueve el navbar completamente fuera de la vista */
+}
+
+.custom-navbar .navbar-brand img {
+    height: 90px;
+}
+
+.custom-navbar .nav-link {
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #555;
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+
+/* Banner completo ocupando la pantalla */
+.banner {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre texto e imagen */
+    background-color: #062107; /* Fondo oscuro */
+    padding: 20px;
+    color: #fff;
+    box-sizing: border-box; /* Incluye padding en cálculos de ancho/alto */
+}
+
+/* Parte izquierda del banner */
+.banner-content {
+    max-width: 60%; /* Limita el ancho del texto */
+    text-align: left;
+    margin-left: 7vh;
+    margin-top: 10vh;
+}
+
+.banner-content h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 5rem; /* Tamaño del texto en pantallas grandes */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.banner-content .section-subtitle {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+/* Imagen rotativa a la derecha */
+.rotating-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* No permite que el contenedor crezca o se reduzca */
+    margin-right: 16vh; /* Despegado del margen derecho */
+    margin-top: 10vh;
+}
+
+.rotating-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Imagen redonda */
+    animation: spin-slow 20s linear infinite; /* Animación de giro */
+    transition: transform 0.5s ease; /* Suaviza la transición al detenerse */
+}
+
+/* Detiene la animación al pasar el cursor */
+.rotating-image:hover {
+    animation-play-state: paused; /* Pausa la animación */
+    transform: rotate(0deg); /* Vuelve a la posición inicial */
+}
+
+/* Animación de giro */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg); /* Inicio del giro */
+    }
+    to {
+        transform: rotate(360deg); /* Completa el giro */
+    }
+}
+
+/* --- RESPONSIVIDAD --- */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column; /* Apila texto e imagen en vertical */
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner-content {
+        max-width: 90%; /* Reduce el ancho del texto */
+        margin: 0 0 20px 0; /* Centra y añade margen inferior */
+    }
+
+    .banner-content h1 {
+        font-size: 3.5rem; /* Reduce el tamaño del texto */
+    }
+
+    .rotating-image-container {
+        margin-right: 0; /* Quita el margen derecho */
+        margin-top: 20px; /* Añade margen superior */
+    }
+
+    .rotating-image {
+        width: 250px;
+        height: 250px; /* Imagen más pequeña */
+    }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column; /* Texto arriba, imagen abajo */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .banner-content {
+        max-width: 100%; /* Ocupa todo el ancho */
+        margin: 0 0 20px 0; /* Centra y añade margen inferior */
+        margin-top: 20vh;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem; /* Texto aún más pequeño */
+    }
+
+    .banner-content .section-subtitle {
+        font-size: 1rem; /* Texto descriptivo más pequeño */
+    }
+
+    .rotating-image-container {
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    .rotating-image {
+        width: 200px;
+        height: 200px; /* Imagen aún más pequeña */
+    }
+    .custom-navbar {
+        width: 90%; /* Reduce ligeramente el ancho del navbar */
+        border-radius: 15px; /* Menos redondeado en pantallas pequeñas */
+        padding: 0px 20px; /* Reduce el padding horizontal */
+        background: #d1d3cdfa;
+     }
+}
+
+
+
+/* Estilos del footer */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 20vh;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Iconos y dirección */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: red;
+    position: relative;
+    bottom: 0vh;
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: red;
+    position: relative;
+    bottom: 1vh;
+}
+
+/* Tamaños iniciales */
+.location-icon i, .footer-socials i {
+    position: relative;
+    bottom: 2vh;
+    font-size: 1.9rem;
+    color: white;
+    transition: .2s linear
+}
+
+.footer-socials i.fa-facebook:hover {
+    color: #1c67f2; /* Color de Facebook */
+}
+
+.footer-socials i.fa-instagram:hover {
+    color: #f3198a; /* Color de Instagram */
+    transition: .2s linear;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    i.location-icon {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1em; /* Redimensiona texto en pantallas pequeñas */
+        gap: 8px;
+        position: relative;
+        bottom: 3vh;
+    }
+
+    .location-icon i {
+        font-size: 1.3em; /* Ajusta el tamaño del ícono */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .location-icon {
+        font-size: 0.9em; /* Disminuye el tamaño del texto aún más */
+        gap: 6px;
+    }
+
+    .location-icon i {
+        font-size: 1.1em; /* Tamaño menor del ícono en móviles */
+    }
+}
+
+
+/* Estilo del logo y nombre de la escuela */
+.footer-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    position: relative;
+    bottom: 1vh;
+    width: 40px; /* Ajusta el tamaño del logo aquí */
+}
+
+.footer-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* Ubicación del footer */
+.footer-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+/* Estilos generales de la sección */
+.contact-us-section {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Responsivo: las columnas se apilan en pantallas pequeñas */
+    padding: 40px;
+    background-color: #f4f4f4; /* Fondo claro */
+    gap: 150px; /* Espaciado claro entre las columnas */
+    margin-top: 40vh;
+}
+
+/* Lado izquierdo: Información */
+.contact-left {
+    flex: 1; /* Ocupa un espacio proporcional */
+    max-width: 500px; /* Ancho máximo */
+    text-align: left; /* Alineación del texto */
+    line-height: 5.3vh;
+}
+
+.contact-title {
+    font-size: 2.4rem;
+    color: black;
+    font-family: "Roboto Condensed", Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.contact-title .highlight {
+    color: #0e771e;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #02407f; /* Azul oscuro para enlaces */
+    text-decoration: none;
+}
+
+/* Lado derecho: Formulario */
+.contact-right {
+    flex: 1; /* Ocupa un espacio proporcional */
+    max-width: 500px; /* Ancho máximo */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre campos */
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black; /* Azul oscuro */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "Nunito", sans-serif;
+    transition: 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: none; /* Evita redimensionar el textarea */
+}
+
+.submit-button {
+    background-color: #0e771e; /* Azul oscuro */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: auto; /* Modificable */
+}
+
+.submit-button:hover {
+    background-color: #095715; /* Celeste oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact-us-section {
+        flex-direction: column; /* Las columnas se apilan */
+        align-items: center; /* Centra las columnas */
+        gap: 30px; /* Reduce el espacio entre columnas */
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%; /* Ocupan todo el ancho */
+    }
+
+    /* Ajuste para acercar los campos hacia la izquierda */
+    .contact-form label,
+    .contact-form input {
+        margin-right: 13vh; /* Desplaza hacia la izquierda */
+    }
+
+    .submit-button {
+        width: 100%; /* Botón más ancho en pantallas pequeñas */
+    }
+
+    .contact-title {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+.spacer-mapa {
+    height: 163px;
+}
+
+.mapa {
+    display: block;  
+    margin: 0 auto;    
+    width: 100%;
+    height: 150px;
+}  
+
+
+/* From Uiverse.io by Matilemak */ 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #1e1e1e;
+    box-shadow: 0 0 0 2px #1e1e1e;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 217px;
+    margin: 0 auto;
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #1e1e1e;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #0e771e;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #fff;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #fff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #0e771e;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+  
