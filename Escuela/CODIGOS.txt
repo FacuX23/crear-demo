@@ -1,0 +1,249 @@
+/* Contenedor general */
+.responsive-container {
+    display: flex;
+    flex-direction: row; /* Imagen y texto en fila (modo PC) */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background-color: #dcdcdc; /* Fondo gris claro */
+    padding: 20px;
+    gap: 40px; /* Espacio entre imagen y texto */
+    height: 100vh; /* Altura completa del viewport */
+    box-sizing: border-box; /* Incluye padding en cálculos de ancho/alto */
+    position: relative; /* Para permitir que los hijos usen z-index */
+    height: 100vh; /* O ajusta el tamaño que desees */
+}
+
+/* Imagen responsiva */
+.responsive-image {
+    max-width: 100%;
+    height: auto; /* Mantiene proporción */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    margin-bottom: 80vh;
+    margin-left: 14vh;
+}
+
+/* Contenedor del texto */
+.text-container {
+    max-width: 750px; /* Limita ancho del texto */
+    margin-bottom: 78vh;
+    margin-left: 15vh;
+}
+
+/* Títulos */
+.text-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333; /* Gris oscuro */
+}
+
+/* Párrafo */
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Gris intermedio */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .responsive-container {
+        flex-direction: column; /* Cambia a columna (imagen arriba, texto abajo) */
+        align-items: center;
+        gap: 20px; /* Reduce espacio entre elementos */
+        height: 160vh;
+    }
+
+    .responsive-image {
+        margin: 0 0;
+        position: relative;
+        top: -6vh;
+    }
+
+    .text-container {
+        text-align: center; /* Centra texto para pantallas pequeñas */
+        margin: 0 0;
+        position: relative;
+        top: 0vh;
+    }
+}
+
+--------------------------------------------
+
+@media (min-width: 1024px) {
+
+    .responsive-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Pantallas medianas */
+@media (max-width: 1024px) {
+
+    .responsive-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .responsive-image {
+        max-width: 80%; /* Imagen más pequeña */
+    }
+
+    .text-container {
+        text-align: center; /* Centrar texto */
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+
+    .responsive-container {
+        flex-direction: column;
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Imagen ocupa todo el ancho */
+    }
+
+    .text-container {
+        text-align: center;
+    }
+}
+
+------------------------------------------------------------------
+
+<!-- Sección de Contacto -->
+<section class="contact-section">
+    <h2 class="contact-title">MANERAS DE CONTACTARNOS</h2>
+    <div class="contact-cards">
+        <!-- Primera Tarjeta -->
+        <div class="contact-card">
+            <div class="icon-text">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div>
+                    <h3>Correo Electrónico</h3>
+                    <a href="mailto:secretaria@escuelacrear.com.ar"><p>secretaria@escuelacrear.com.ar</p></a>
+                </div>
+            </div>
+            <div class="icon-text">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>+123 456 789</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda Tarjeta -->
+        <div class="contact-card card-small">
+            <div class="icon-text">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <div>
+                    <h3>Dirección</h3>
+                    <p>Av. Eva Perón 2332, E3200 Concordia, Entre Ríos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+/* Fondo de la sección de contacto */
+.contact-section {
+    background-color: #dcdcdc; /* Fondo gris claro */
+    padding: 40px 20px; /* Espaciado interno para separar del contenido adyacente */
+    margin-top: 15vh;
+}
+
+/* Título de la sección */
+.contact-title {
+    text-align: center;
+    font-size: 4.8rem;
+    font-family: "Anton", sans-serif;
+    color: black;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+/* Contenedor de tarjetas */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre tarjetas */
+    flex-wrap: wrap; /* Para que sean responsivas */
+    padding: 20px;
+}
+
+/* Tarjetas */
+.contact-card {
+    background-color: #fff;
+    box-shadow: 0px 9px 24px rgb(0 0 0 / 36%);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px; /* Ancho de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre elementos internos */
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
+    
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta al pasar el cursor */
+}
+
+/* Tarjeta más pequeña (Dirección) */
+.contact-card.card-small {
+    width: 250px; /* Ancho reducido */
+}
+
+/* Iconos e información */
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el icono y el texto */
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #ffa200; /* Naranja */
+}
+
+/* Texto dentro de las tarjetas */
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: black;
+    font-family: "Nunito", sans-serif;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    margin: 0;
+    color: black; /* Negro */
+    font-family: "Nunito", sans-serif;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas */
+        gap: 30px; /* Espaciado entre tarjetas */
+    }
+
+    .contact-card {
+        width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+    }
+
+    .contact-card.card-small {
+        width: 80%; /* La tarjeta más pequeña también se adapta */
+    }
+    .contact-title {
+        font-size: 3.4rem;
+    }
+}
+

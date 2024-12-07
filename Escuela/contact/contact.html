@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Escuela Crear</title>
+    <link rel="icon" class="pestaña" href="/imagenes/logo-pestaña.ico"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/imagenes/escuela-text-negro22332.png" alt="Logo de la escuela" height="50">
+            </a>
+            <!-- Botón desplegable en pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Enlaces del navbar -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" >Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About/about.html" target="_blank">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inscripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>                                      
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Banner Section -->
+<section class="banner">
+    <!-- Parte izquierda con el texto de bienvenida -->
+    <div class="banner-content">
+        <h1 class="section-title">Contacta con <br> Escuela Crear</h1>
+        <p class="section-subtitle" data-aos="fade-in" data-aos-duration="2000">
+            Estamos aquí para ayudarte. Ya sea que tengas preguntas sobre nuestro equipo o quieras visitar la escuela, no dudes en ponerte en contacto. ¡Esperamos saber de ti pronto!
+        </p>
+    </div>
+    <!-- Imagen rotativa a la derecha -->
+    <div class="rotating-image-container">
+        <img src="/contact/imagenes/1.jpg" alt="Imagen rotativa" class="rotating-image">
+    </div>
+</section>
+
+<div class="spacer-mapa"></div>
+    <div class="container mt-5">
+      
+        <div class="row">
+            <div class="col-md-12">
+<div id class="mapa">    
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.6865160886136!2d-58.011254799999996!3d-31.367628800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade827460da4f1%3A0x3267aaaf7b73f338!2sEscuela%20Crear!5e0!3m2!1ses-419!2sar!4v1725649663868!5m2!1ses-419!2sar" 
+  width="100%" 
+  height="275%" 
+  style="border: 4px solid; position: relative;
+  border-color: #efeeee; border-radius: 7px; user-select: no; box-shadow: 0 1px 3px rgb(0 0 0 / 49%);" 
+  allowfullscreen=""
+  referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div id>
+</div>
+  </div>
+    </div>
+
+<!-- Sección de Contacto -->
+<section class="contact-us-section">
+    <!-- Lado izquierdo: Información -->
+    <div class="contact-left">
+        <h2 class="contact-title">
+            PONTE EN <br> CONTACTO <br> CON NOSOTROS <span class="highlight">HOY</span>
+        </h2>
+        <p class="contact-subtitle">
+            <strong>Para consultas genéricas, comuníquese con nuestro equipo de recepción a través del formulario.</strong>
+        </p>
+        <p class="contact-info"> <b>Dirección:</b> Av. Eva Perón 2332, E3200 Concordia, Entre Ríos</p>
+        <p class="contact-info"> <b>Teléfono:</b>  0345 425-1860</p>
+        <p class="contact-info"> <b>Consultas generales:</b> <a href="mailto:secretaria@escuelacrear.com.ar">secretaria@escuelacrear.com.ar</a></p>
+    </div>
+
+    <!-- Lado derecho: Formulario -->
+    <div class="contact-right">
+        <form class="contact-form" data-netlify="true" name="contact">
+            <input type="hidden" name="form-name" value="contact">
+            <label for="first-name">Nombres:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Ingrese su nombre" required>
+
+            <label for="last-name">Apellido:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Ingrese su apellido" required>
+
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ingrese su número de teléfono" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escriba su mensaje aquí" required></textarea>
+
+<button class="animated-button">
+  <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text">Enviar Formulario</span>
+  <span class="circle"></span>
+  <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+
+        </form>
+    </div>
+</section>
+
+
+
+
+    
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo-name">
+            <img src="/imagenes/pestaña2.png" alt="Logo del Instituto" class="footer-logo">
+            <p class="footer-name">Instituto Secundario CREAR</p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=100063649296682" target="_blank" class="social-icon-facebook" ><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/escuelacrear/" target="_blank" class="social-icon-instagram" ><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-location">
+            <i class="fas fa-map-marker-alt location-icon"></i> <!-- Ícono de ubicación -->
+            <p>Av. Eva Perón 2332, E3200 Concordia, Entre Ríos</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScrip --> <!--- NavBar -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.custom-navbar');
+    
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                // Desplazamiento hacia abajo - Ocultar navbar
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Desplazamiento hacia arriba - Mostrar navbar
+                navbar.classList.remove('navbar-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+
+    
+</body>
+<script>
+    AOS.init();
+  </script>
+</html>
